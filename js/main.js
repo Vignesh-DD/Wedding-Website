@@ -29,6 +29,10 @@
 
 
     // Modal Video
+    const ele=document.querySelector('.playbtn');
+    ele.addEventListener("click",function(event){
+        event.preventDefault();
+    });
     $(document).ready(function () {
         var $videoSrc;
         $('.btn-play').click(function () {
@@ -37,11 +41,7 @@
         console.log($videoSrc);
 
         $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc  +"?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
+            $("#video").attr('src', $videoSrc );
         })
     });
 
