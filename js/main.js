@@ -29,10 +29,6 @@
 
 
     // Modal Video
-    const ele=document.querySelector('.playbtn');
-    ele.addEventListener("click",function(event){
-        event.preventDefault();
-    });
     $(document).ready(function () {
         var $videoSrc;
         $('.btn-play').click(function () {
