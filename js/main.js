@@ -44,7 +44,7 @@
         })
 
         $('.close').click(function(){
-            $('iframe').attr('src',"");
+            $('.embed-responsive-item').attr('src',"");
         });
        
     });
