@@ -28,18 +28,27 @@
     });
 
 
-    // Modal Video
+    // Modal Video 
     $(document).ready(function () {
         var $videoSrc;
         $('.btn-play').click(function () {
+            document.querySelector('.modal').style.pointerEvents='none';
             $videoSrc = $(this).data("src");
+         
+            
         });
-        console.log($videoSrc);
-
+        // console.log($videoSrc);
         $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc );
+            $("#video").attr('src', $videoSrc );   
+            
         })
+
+        $('.close').click(function(){
+            $('iframe').attr('src',"");
+        });
+       
     });
+    
 
 
     // Scroll to Bottom
